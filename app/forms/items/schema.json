@@ -1,0 +1,18 @@
+{
+  "title": "Item",
+  "description": "Items are used for many different purposes, such as equipment to a person, clothing, weapons, food, stored items in a building or container, used in a trap and many other uses.",
+  "type": "object",
+  "required": [
+    "name"
+  ],
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "title": "UUID"
+    },
+    "name": {
+      "type": "string",
+      "title": "Name"
+    }
+  }
+}

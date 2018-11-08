@@ -1,0 +1,16 @@
+{
+  "uuid": {
+    "ui:options": {
+      "disabled": true
+    }
+  },
+  "name": {
+    "ui:autofocus": true
+  },
+  "notes": {
+    "ui:widget": "textarea"
+  },
+  "abstractProperties": {
+    "ui:widget": "textarea"
+  }
+}

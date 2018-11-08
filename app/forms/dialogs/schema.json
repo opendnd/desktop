@@ -1,0 +1,18 @@
+{
+  "title": "Dialog",
+  "description": "Dialogs are the non-playable interactions, narratives and riddles that interact with your players.",
+  "type": "object",
+  "required": [
+    "name"
+  ],
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "title": "UUID"
+    },
+    "name": {
+      "type": "string",
+      "title": "Name"
+    }
+  }
+}

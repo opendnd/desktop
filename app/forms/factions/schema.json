@@ -1,0 +1,18 @@
+{
+  "title": "Faction",
+  "description": "Factions are the political powers that influence your world and give depth to your quests and domains.",
+  "type": "object",
+  "required": [
+    "name"
+  ],
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "title": "UUID"
+    },
+    "name": {
+      "type": "string",
+      "title": "Name"
+    }
+  }
+}

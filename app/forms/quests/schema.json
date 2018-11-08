@@ -1,0 +1,18 @@
+{
+  "title": "Quest",
+  "description": "Quests make up the adventures of your campaign and give players exciting goals to achieve or terrible fates to prevent.",
+  "type": "object",
+  "required": [
+    "name"
+  ],
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "title": "UUID"
+    },
+    "name": {
+      "type": "string",
+      "title": "Name"
+    }
+  }
+}

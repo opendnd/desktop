@@ -1,0 +1,185 @@
+{
+  "definitions": {
+    "trait": {
+      "type": "object",
+      "properties": {
+        "gene": { "type": "string", "title": "Gene" },
+        "trait": { "type": "string", "title": "Trait" }
+      }
+    }
+  },
+  "title": "Disease",
+  "description": "Diseases are the illnesses and conditions that affect the inhabitants of your world.",
+  "type": "object",
+  "required": [
+    "name"
+  ],
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "title": "UUID"
+    },
+    "name": {
+      "type": "string",
+      "title": "Name"
+    },
+    "abstract": {
+      "type": "boolean",
+      "title": "Abstract"
+    },
+    "abstractProperties": {
+      "type": "string",
+      "title": "Abstract Properties"
+    },
+    "derivation": {
+      "type": "string",
+      "title": "Derivation"
+    },
+    "type": {
+      "type": "enum",
+      "title": "Type",
+      "enum": [
+        "Infectious",
+        "Autoimmune",
+        "Congenital",
+        "Dietary",
+        "Cognitive"
+      ]
+    },
+    "condition": {
+      "type": "enum",
+      "title": "Condition",
+      "enum": [
+        "Acute",
+        "Chronic"
+      ]
+    },
+    "pathogen": {
+      "type": "enum",
+      "title": "Pathogen",
+      "enum": [
+        "Bacterium",
+        "Virus",
+        "Fungus",
+        "Protist"
+      ]
+    },
+    "transmission": {
+      "type": "enum",
+      "title": "Transmission",
+      "enum": [
+        "Air",
+        "Vector",
+        "Animal",
+        "Food",
+        "Environmental"
+      ]
+    },
+    "incubationTime": {
+      "type": "number",
+      "title": "Incubation Time"
+    },
+    "incuationDice": {
+      "type": "enum",
+      "title": "Incuation Dice",
+      "enum": [
+        "",
+        "d4",
+        "d6",
+        "d8",
+        "d10",
+        "d12",
+        "d20",
+        "d100"
+      ]
+    },
+    "exhaustion": {
+      "type": "number",
+      "title": "Exhaustion"
+    },
+    "resistance": {
+      "type": "enum",
+      "title": "Resistance",
+      "enum": [
+        "Acid",
+        "Bludgeoning",
+        "Cold",
+        "Fire",
+        "Force",
+        "Lightning",
+        "Necrotic",
+        "Piercing",
+        "Poison",
+        "Psychic",
+        "Radiant",
+        "Slashing",
+        "Thunder"
+      ]
+    },
+    "vulnerability": {
+      "type": "enum",
+      "title": "Vulnerability",
+      "enum": [
+        "Acid",
+        "Bludgeoning",
+        "Cold",
+        "Fire",
+        "Force",
+        "Lightning",
+        "Necrotic",
+        "Piercing",
+        "Poison",
+        "Psychic",
+        "Radiant",
+        "Slashing",
+        "Thunder"
+      ]
+    },
+    "immunity": {
+      "title": "Immunity",
+      "$ref": "#/definitions/trait"
+    },
+    "savingThrow": {
+      "type": "string",
+      "title": "Saving Throw",
+      "enum": [
+        "",
+        "Strength",
+        "Dexterity",
+        "Constitution",
+        "Intelligence",
+        "Wisdom",
+        "Charisma"
+      ]
+    },
+    "damage": {
+      "type": "array",
+      "title": "Damage",
+      "items": {
+        "type": "string",
+        "default": "d4",
+        "enum": [
+          "d4",
+          "d6",
+          "d8",
+          "d10",
+          "d12",
+          "d20",
+          "d100"
+        ]
+      }
+    },
+    "trigger": {
+      "type": "string",
+      "title": "Trigger"
+    },
+    "triggerTime": {
+      "type": "number",
+      "title": "Trigger Time"
+    },
+    "notes": {
+      "type": "string",
+      "title": "Notes"
+    }
+  }
+}

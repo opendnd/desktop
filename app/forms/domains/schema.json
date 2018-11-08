@@ -1,0 +1,18 @@
+{
+  "title": "Domain",
+  "description": "Domains are the basic geopolitical components that make up the world you're building. This includes high level nations such as kingdoms down to the lowest level communities like villages and hamlets.",
+  "type": "object",
+  "required": [
+    "name"
+  ],
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "title": "UUID"
+    },
+    "name": {
+      "type": "string",
+      "title": "Name"
+    }
+  }
+}

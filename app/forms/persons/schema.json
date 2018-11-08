@@ -1,0 +1,18 @@
+{
+  "title": "Person",
+  "description": "Persons are the characters both playable and non that make up your world.",
+  "type": "object",
+  "required": [
+    "name"
+  ],
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "title": "UUID"
+    },
+    "name": {
+      "type": "string",
+      "title": "Name"
+    }
+  }
+}

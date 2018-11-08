@@ -1,0 +1,18 @@
+{
+  "title": "Building",
+  "description": "Buildings are the structures that make up your cities, towns and villages.",
+  "type": "object",
+  "required": [
+    "name"
+  ],
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "title": "UUID"
+    },
+    "name": {
+      "type": "string",
+      "title": "Name"
+    }
+  }
+}

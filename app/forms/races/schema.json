@@ -1,0 +1,18 @@
+{
+  "title": "Race",
+  "description": "Races are the backbone of a person down to the DNA. Races like humans, dwarves, elves, etc. can be heavily customized.",
+  "type": "object",
+  "required": [
+    "name"
+  ],
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "title": "UUID"
+    },
+    "name": {
+      "type": "string",
+      "title": "Name"
+    }
+  }
+}

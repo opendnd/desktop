@@ -1,0 +1,18 @@
+{
+  "title": "DNA",
+  "description": "DNA are the dice-encoded rolls that make up the essence of your character.",
+  "type": "object",
+  "required": [
+    "name"
+  ],
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "title": "UUID"
+    },
+    "name": {
+      "type": "string",
+      "title": "Name"
+    }
+  }
+}

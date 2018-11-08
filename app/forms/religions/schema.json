@@ -1,0 +1,18 @@
+{
+  "title": "Religion",
+  "description": "Religions form the gods, demi-gods and divine entities that inspire your world.",
+  "type": "object",
+  "required": [
+    "name"
+  ],
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "title": "UUID"
+    },
+    "name": {
+      "type": "string",
+      "title": "Name"
+    }
+  }
+}

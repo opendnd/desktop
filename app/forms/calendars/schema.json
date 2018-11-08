@@ -1,0 +1,18 @@
+{
+  "title": "Calendar",
+  "description": "Calendars are used to record stories throughout time.",
+  "type": "object",
+  "required": [
+    "name"
+  ],
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "title": "UUID"
+    },
+    "name": {
+      "type": "string",
+      "title": "Name"
+    }
+  }
+}

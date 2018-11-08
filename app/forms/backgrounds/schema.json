@@ -1,0 +1,18 @@
+{
+  "title": "Background",
+  "description": "Backgrounds are used for a person to help determine ideals, bonds, etc. Where a person comes from is important to give us context on where they'll go next.",
+  "type": "object",
+  "required": [
+    "name"
+  ],
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "title": "UUID"
+    },
+    "name": {
+      "type": "string",
+      "title": "Name"
+    }
+  }
+}

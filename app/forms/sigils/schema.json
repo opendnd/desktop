@@ -1,0 +1,18 @@
+{
+  "title": "Sigil",
+  "description": "Sigils are the flags, insignias and crests that the factions of your world use to proudly show their colors.",
+  "type": "object",
+  "required": [
+    "name"
+  ],
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "title": "UUID"
+    },
+    "name": {
+      "type": "string",
+      "title": "Name"
+    }
+  }
+}

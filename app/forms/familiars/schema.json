@@ -1,0 +1,18 @@
+{
+  "title": "Familiar",
+  "description": "Familiars are the companion beasts of your world. ",
+  "type": "object",
+  "required": [
+    "name"
+  ],
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "title": "UUID"
+    },
+    "name": {
+      "type": "string",
+      "title": "Name"
+    }
+  }
+}

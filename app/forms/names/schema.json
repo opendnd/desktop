@@ -1,0 +1,18 @@
+{
+  "title": "Name",
+  "description": "Names are used for everything from naming characters to naming your domains, buildings, streets and more.",
+  "type": "object",
+  "required": [
+    "name"
+  ],
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "title": "UUID"
+    },
+    "name": {
+      "type": "string",
+      "title": "Name"
+    }
+  }
+}

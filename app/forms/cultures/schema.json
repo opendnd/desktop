@@ -1,0 +1,18 @@
+{
+  "title": "Culture",
+  "description": "Cultures are a combination of language, religion, music, food and much more that make your world unique.",
+  "type": "object",
+  "required": [
+    "name"
+  ],
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "title": "UUID"
+    },
+    "name": {
+      "type": "string",
+      "title": "Name"
+    }
+  }
+}

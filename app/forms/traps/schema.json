@@ -1,0 +1,18 @@
+{
+  "title": "Trap",
+  "description": "Traps and puzzles make your dungeons more challenging by forcing the players to work together.",
+  "type": "object",
+  "required": [
+    "name"
+  ],
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "title": "UUID"
+    },
+    "name": {
+      "type": "string",
+      "title": "Name"
+    }
+  }
+}

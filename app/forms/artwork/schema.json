@@ -1,0 +1,18 @@
+{
+  "title": "Artwork",
+  "description": "Artwork makes up the paintings, sculptures, literature of your unique world.",
+  "type": "object",
+  "required": [
+    "name"
+  ],
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "title": "UUID"
+    },
+    "name": {
+      "type": "string",
+      "title": "Name"
+    }
+  }
+}
