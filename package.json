@@ -172,7 +172,7 @@
     "personae": "^0.8.6",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "react-jsonschema-form-material-ui": "git+https://github.com/drewry/material-ui-jsonschema-form.git#f7d630dbeff833a64b5fe1216779ac66bc9d4e45",
+    "react-jsonschema-form-material-ui": "drewry/material-ui-jsonschema-form.git",
     "react-redux": "^5.0.1",
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",

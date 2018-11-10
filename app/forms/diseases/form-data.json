@@ -2,5 +2,16 @@
   "name": "",
   "triggerTime": 0,
   "incubationTime": 0,
-  "exhaustion": 0
+  "exhaustion": 0,
+  "derivation": {
+    "uuid": ""
+  },
+  "immunity": {
+    "gene": "",
+    "trait": ""
+  },
+  "incubation": {
+    "dice": "",
+    "time": 0
+  }
 }

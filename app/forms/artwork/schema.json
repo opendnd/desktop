@@ -1,18 +1,19 @@
 {
   "title": "Artwork",
   "description": "Artwork makes up the paintings, sculptures, literature of your unique world.",
-  "type": "object",
-  "required": [
-    "name"
-  ],
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
   "properties": {
     "uuid": {
-      "type": "string",
-      "title": "UUID"
-    },
-    "name": {
-      "type": "string",
-      "title": "Name"
+      "title": "uuid",
+      "type": "string"
     }
-  }
+  },
+  "propertyOrder": [
+    "uuid"
+  ],
+  "required": [
+    "uuid"
+  ],
+  "type": "object"
 }

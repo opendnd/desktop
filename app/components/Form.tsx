@@ -3,7 +3,7 @@ import Typography from '@material-ui/core/Typography';
 import { Person } from 'opendnd-core';
 
 const uuidv1 = require('uuid/v1');
-const MUIForm = require('react-jsonschema-form-material-ui');
+const MUIForm = require('material-ui-jsonschema-form');
 
 export interface ISchema {
   title: string

@@ -12,5 +12,23 @@
   },
   "abstractProperties": {
     "ui:widget": "textarea"
+  },
+  "properties": {
+    "ui:widget": "textarea"
+  },
+  "derivation": {
+    "uuid": {
+      "ui:description": "The Disease this abstract disease is derived from"
+    }
+  },
+  "incubation": {
+    "time": {
+      "ui:description": "Incubation is the time (seconds) times a dice roll for when the disease starts to take effect"
+    }
+  },
+  "immunity": {
+    "gene": {
+      "ui:description": "The gene that provides immunity to this disease"
+    }
   }
 }
