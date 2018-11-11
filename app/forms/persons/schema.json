@@ -2,17 +2,3544 @@
   "title": "Person",
   "description": "Persons are the characters both playable and non that make up your world.",
   "type": "object",
-  "required": [
-    "name"
-  ],
   "properties": {
-    "uuid": {
-      "type": "string",
-      "title": "UUID"
+    "AC": {
+      "title": "AC",
+      "type": "number"
+    },
+    "DNA": {
+      "additionalProperties": false,
+      "properties": {
+        "abstract": {
+          "title": "abstract",
+          "type": "boolean"
+        },
+        "abstractProperties": {
+          "title": "abstractProperties",
+          "type": "string"
+        },
+        "chromosomes": {
+          "additionalProperties": false,
+          "properties": {
+            "1": {
+              "title": "1",
+              "type": "string"
+            },
+            "2": {
+              "title": "2",
+              "type": "string"
+            },
+            "3": {
+              "title": "3",
+              "type": "string"
+            },
+            "4": {
+              "title": "4",
+              "type": "string"
+            },
+            "5": {
+              "title": "5",
+              "type": "string"
+            },
+            "6": {
+              "title": "6",
+              "type": "string"
+            },
+            "7": {
+              "title": "7",
+              "type": "string"
+            },
+            "8": {
+              "title": "8",
+              "type": "string"
+            },
+            "9": {
+              "title": "9",
+              "type": "string"
+            },
+            "10": {
+              "title": "10",
+              "type": "string"
+            },
+            "11": {
+              "title": "11",
+              "type": "string"
+            },
+            "12": {
+              "title": "12",
+              "type": "string"
+            },
+            "13": {
+              "title": "13",
+              "type": "string"
+            },
+            "14": {
+              "title": "14",
+              "type": "string"
+            },
+            "15": {
+              "title": "15",
+              "type": "string"
+            },
+            "16": {
+              "title": "16",
+              "type": "string"
+            },
+            "17": {
+              "title": "17",
+              "type": "string"
+            },
+            "18": {
+              "title": "18",
+              "type": "string"
+            },
+            "19": {
+              "title": "19",
+              "type": "string"
+            },
+            "20": {
+              "title": "20",
+              "type": "string"
+            },
+            "21": {
+              "title": "21",
+              "type": "string"
+            },
+            "22": {
+              "title": "22",
+              "type": "string"
+            },
+            "23": {
+              "title": "23",
+              "type": "string"
+            },
+            "24": {
+              "title": "24",
+              "type": "string"
+            },
+            "25": {
+              "title": "25",
+              "type": "string"
+            },
+            "26": {
+              "title": "26",
+              "type": "string"
+            },
+            "27": {
+              "title": "27",
+              "type": "string"
+            },
+            "28": {
+              "title": "28",
+              "type": "string"
+            },
+            "29": {
+              "title": "29",
+              "type": "string"
+            },
+            "30": {
+              "title": "30",
+              "type": "string"
+            },
+            "31": {
+              "title": "31",
+              "type": "string"
+            },
+            "32": {
+              "title": "32",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32"
+          ],
+          "title": "chromosomes",
+          "type": "object"
+        },
+        "derivation": {
+          "additionalProperties": false,
+          "properties": {
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid"
+          ],
+          "required": [
+            "uuid"
+          ],
+          "title": "derivation",
+          "type": "object"
+        },
+        "gender": {
+          "enum": [
+            "female",
+            "male",
+            "neuter"
+          ],
+          "title": "gender",
+          "type": "string"
+        },
+        "height": {
+          "title": "height",
+          "type": "number"
+        },
+        "notes": {
+          "title": "notes",
+          "type": "string"
+        },
+        "race": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name"
+          ],
+          "required": [
+            "uuid"
+          ],
+          "title": "race",
+          "type": "object"
+        },
+        "size": {
+          "enum": [
+            "colossal",
+            "diminutive",
+            "fine",
+            "gargantuan",
+            "huge",
+            "large",
+            "medium",
+            "small",
+            "tiny"
+          ],
+          "title": "size",
+          "type": "string"
+        },
+        "traits": {
+          "additionalProperties": false,
+          "properties": {
+            "eyeBrows": {
+              "additionalProperties": false,
+              "properties": {
+                "gene": {
+                  "title": "gene",
+                  "type": "string"
+                },
+                "trait": {
+                  "title": "trait",
+                  "type": "string"
+                }
+              },
+              "propertyOrder": [
+                "gene",
+                "trait"
+              ],
+              "required": [
+                "gene",
+                "trait"
+              ],
+              "title": "eyeBrows",
+              "type": "object"
+            },
+            "eyeColor": {
+              "additionalProperties": false,
+              "properties": {
+                "gene": {
+                  "title": "gene",
+                  "type": "string"
+                },
+                "trait": {
+                  "title": "trait",
+                  "type": "string"
+                }
+              },
+              "propertyOrder": [
+                "gene",
+                "trait"
+              ],
+              "required": [
+                "gene",
+                "trait"
+              ],
+              "title": "eyeColor",
+              "type": "object"
+            },
+            "eyeShape": {
+              "additionalProperties": false,
+              "properties": {
+                "gene": {
+                  "title": "gene",
+                  "type": "string"
+                },
+                "trait": {
+                  "title": "trait",
+                  "type": "string"
+                }
+              },
+              "propertyOrder": [
+                "gene",
+                "trait"
+              ],
+              "required": [
+                "gene",
+                "trait"
+              ],
+              "title": "eyeShape",
+              "type": "object"
+            },
+            "faceMouth": {
+              "additionalProperties": false,
+              "properties": {
+                "gene": {
+                  "title": "gene",
+                  "type": "string"
+                },
+                "trait": {
+                  "title": "trait",
+                  "type": "string"
+                }
+              },
+              "propertyOrder": [
+                "gene",
+                "trait"
+              ],
+              "required": [
+                "gene",
+                "trait"
+              ],
+              "title": "faceMouth",
+              "type": "object"
+            },
+            "faceNose": {
+              "additionalProperties": false,
+              "properties": {
+                "gene": {
+                  "title": "gene",
+                  "type": "string"
+                },
+                "trait": {
+                  "title": "trait",
+                  "type": "string"
+                }
+              },
+              "propertyOrder": [
+                "gene",
+                "trait"
+              ],
+              "required": [
+                "gene",
+                "trait"
+              ],
+              "title": "faceNose",
+              "type": "object"
+            },
+            "faceShape": {
+              "additionalProperties": false,
+              "properties": {
+                "gene": {
+                  "title": "gene",
+                  "type": "string"
+                },
+                "trait": {
+                  "title": "trait",
+                  "type": "string"
+                }
+              },
+              "propertyOrder": [
+                "gene",
+                "trait"
+              ],
+              "required": [
+                "gene",
+                "trait"
+              ],
+              "title": "faceShape",
+              "type": "object"
+            },
+            "general": {
+              "additionalProperties": false,
+              "properties": {
+                "gene": {
+                  "title": "gene",
+                  "type": "string"
+                },
+                "trait": {
+                  "title": "trait",
+                  "type": "string"
+                }
+              },
+              "propertyOrder": [
+                "gene",
+                "trait"
+              ],
+              "required": [
+                "gene",
+                "trait"
+              ],
+              "title": "general",
+              "type": "object"
+            },
+            "hairColor": {
+              "additionalProperties": false,
+              "properties": {
+                "gene": {
+                  "title": "gene",
+                  "type": "string"
+                },
+                "trait": {
+                  "title": "trait",
+                  "type": "string"
+                }
+              },
+              "propertyOrder": [
+                "gene",
+                "trait"
+              ],
+              "required": [
+                "gene",
+                "trait"
+              ],
+              "title": "hairColor",
+              "type": "object"
+            },
+            "hairFacial": {
+              "additionalProperties": false,
+              "properties": {
+                "gene": {
+                  "title": "gene",
+                  "type": "string"
+                },
+                "trait": {
+                  "title": "trait",
+                  "type": "string"
+                }
+              },
+              "propertyOrder": [
+                "gene",
+                "trait"
+              ],
+              "required": [
+                "gene",
+                "trait"
+              ],
+              "title": "hairFacial",
+              "type": "object"
+            },
+            "hairGeneral": {
+              "additionalProperties": false,
+              "properties": {
+                "gene": {
+                  "title": "gene",
+                  "type": "string"
+                },
+                "trait": {
+                  "title": "trait",
+                  "type": "string"
+                }
+              },
+              "propertyOrder": [
+                "gene",
+                "trait"
+              ],
+              "required": [
+                "gene",
+                "trait"
+              ],
+              "title": "hairGeneral",
+              "type": "object"
+            },
+            "skinAging": {
+              "additionalProperties": false,
+              "properties": {
+                "gene": {
+                  "title": "gene",
+                  "type": "string"
+                },
+                "trait": {
+                  "title": "trait",
+                  "type": "string"
+                }
+              },
+              "propertyOrder": [
+                "gene",
+                "trait"
+              ],
+              "required": [
+                "gene",
+                "trait"
+              ],
+              "title": "skinAging",
+              "type": "object"
+            },
+            "skinColor": {
+              "additionalProperties": false,
+              "properties": {
+                "gene": {
+                  "title": "gene",
+                  "type": "string"
+                },
+                "trait": {
+                  "title": "trait",
+                  "type": "string"
+                }
+              },
+              "propertyOrder": [
+                "gene",
+                "trait"
+              ],
+              "required": [
+                "gene",
+                "trait"
+              ],
+              "title": "skinColor",
+              "type": "object"
+            },
+            "skinGeneral": {
+              "additionalProperties": false,
+              "properties": {
+                "gene": {
+                  "title": "gene",
+                  "type": "string"
+                },
+                "trait": {
+                  "title": "trait",
+                  "type": "string"
+                }
+              },
+              "propertyOrder": [
+                "gene",
+                "trait"
+              ],
+              "required": [
+                "gene",
+                "trait"
+              ],
+              "title": "skinGeneral",
+              "type": "object"
+            }
+          },
+          "propertyOrder": [
+            "general",
+            "eyeColor",
+            "hairGeneral",
+            "hairColor",
+            "skinGeneral",
+            "skinColor",
+            "eyeShape",
+            "faceShape",
+            "faceNose",
+            "hairFacial",
+            "faceMouth",
+            "eyeBrows",
+            "skinAging"
+          ],
+          "title": "traits",
+          "type": "object"
+        },
+        "uuid": {
+          "title": "uuid",
+          "type": "string"
+        },
+        "version": {
+          "title": "version",
+          "type": "string"
+        },
+        "weight": {
+          "title": "weight",
+          "type": "number"
+        }
+      },
+      "propertyOrder": [
+        "version",
+        "uuid",
+        "size",
+        "abstract",
+        "abstractProperties",
+        "derivation",
+        "race",
+        "gender",
+        "height",
+        "weight",
+        "traits",
+        "chromosomes",
+        "notes"
+      ],
+      "required": [
+        "abstract",
+        "abstractProperties",
+        "chromosomes",
+        "derivation",
+        "gender",
+        "height",
+        "notes",
+        "race",
+        "size",
+        "traits",
+        "uuid",
+        "version",
+        "weight"
+      ],
+      "title": "DNA",
+      "type": "object"
+    },
+    "HP": {
+      "title": "HP",
+      "type": "number"
+    },
+    "XP": {
+      "title": "XP",
+      "type": "number"
+    },
+    "abilities": {
+      "additionalProperties": false,
+      "properties": {
+        "CHA": {
+          "title": "CHA",
+          "type": "number"
+        },
+        "CON": {
+          "title": "CON",
+          "type": "number"
+        },
+        "DEX": {
+          "title": "DEX",
+          "type": "number"
+        },
+        "INT": {
+          "title": "INT",
+          "type": "number"
+        },
+        "STR": {
+          "title": "STR",
+          "type": "number"
+        },
+        "WIS": {
+          "title": "WIS",
+          "type": "number"
+        }
+      },
+      "propertyOrder": [
+        "STR",
+        "DEX",
+        "CON",
+        "INT",
+        "WIS",
+        "CHA"
+      ],
+      "required": [
+        "CHA",
+        "CON",
+        "DEX",
+        "INT",
+        "STR",
+        "WIS"
+      ],
+      "title": "abilities",
+      "type": "object"
+    },
+    "abstract": {
+      "title": "abstract",
+      "type": "boolean"
+    },
+    "abstractProperties": {
+      "additionalProperties": true,
+      "properties": {},
+      "title": "abstract Properties",
+      "type": "string"
+    },
+    "actions": {
+      "items": {
+        "type": "string"
+      },
+      "title": "actions",
+      "type": "array"
+    },
+    "activeCampaign": {
+      "additionalProperties": false,
+      "properties": {
+        "uuid": {
+          "title": "uuid",
+          "type": "string"
+        }
+      },
+      "propertyOrder": [
+        "uuid"
+      ],
+      "required": [
+        "uuid"
+      ],
+      "title": "active Campaign",
+      "type": "object"
+    },
+    "age": {
+      "title": "age",
+      "type": "number"
+    },
+    "ageGroup": {
+      "enum": [
+        "child",
+        "middle",
+        "old",
+        "young"
+      ],
+      "title": "age Group",
+      "type": "string"
+    },
+    "alignment": {
+      "enum": [
+        "CE",
+        "CG",
+        "CI",
+        "CM",
+        "CN",
+        "LE",
+        "LG",
+        "LI",
+        "LM",
+        "LN",
+        "NE",
+        "NG",
+        "NI",
+        "NM",
+        "NN",
+        "RE",
+        "RG",
+        "RI",
+        "RM",
+        "RN",
+        "SE",
+        "SG",
+        "SI",
+        "SM",
+        "SN"
+      ],
+      "title": "alignment",
+      "type": "string"
+    },
+    "allies": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "title": "name",
+            "type": "string"
+          },
+          "uuid": {
+            "title": "uuid",
+            "type": "string"
+          }
+        },
+        "propertyOrder": [
+          "uuid",
+          "name"
+        ],
+        "required": [
+          "name",
+          "uuid"
+        ],
+        "type": "object"
+      },
+      "title": "allies",
+      "type": "array"
+    },
+    "background": {
+      "additionalProperties": false,
+      "properties": {
+        "uuid": {
+          "title": "uuid",
+          "type": "string"
+        }
+      },
+      "propertyOrder": [
+        "uuid"
+      ],
+      "required": [
+        "uuid"
+      ],
+      "title": "background",
+      "type": "object"
+    },
+    "backstory": {
+      "title": "backstory",
+      "type": "string"
+    },
+    "birth": {
+      "additionalProperties": false,
+      "properties": {
+        "date": {
+          "additionalProperties": false,
+          "properties": {
+            "text": {
+              "title": "text",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "text"
+          ],
+          "required": [
+            "text",
+            "uuid"
+          ],
+          "title": "date",
+          "type": "object"
+        },
+        "domain": {
+          "additionalProperties": false,
+          "properties": {
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid"
+          ],
+          "required": [
+            "uuid"
+          ],
+          "title": "domain",
+          "type": "object"
+        },
+        "rank": {
+          "title": "rank",
+          "type": "number"
+        }
+      },
+      "propertyOrder": [
+        "domain",
+        "date",
+        "rank"
+      ],
+      "required": [
+        "date",
+        "domain",
+        "rank"
+      ],
+      "title": "birth",
+      "type": "object"
+    },
+    "bond": {
+      "title": "bond",
+      "type": "string"
+    },
+    "buildings": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "uuid": {
+            "title": "uuid",
+            "type": "string"
+          }
+        },
+        "propertyOrder": [
+          "uuid"
+        ],
+        "required": [
+          "uuid"
+        ],
+        "type": "object"
+      },
+      "title": "buildings",
+      "type": "array"
+    },
+    "campaigns": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "uuid": {
+            "title": "uuid",
+            "type": "string"
+          }
+        },
+        "propertyOrder": [
+          "uuid"
+        ],
+        "required": [
+          "uuid"
+        ],
+        "type": "object"
+      },
+      "title": "campaigns",
+      "type": "array"
+    },
+    "capacity": {
+      "title": "capacity",
+      "type": "number"
+    },
+    "characteristic": {
+      "title": "characteristic",
+      "type": "string"
+    },
+    "chattel": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "title": "name",
+            "type": "string"
+          },
+          "uuid": {
+            "title": "uuid",
+            "type": "string"
+          }
+        },
+        "propertyOrder": [
+          "uuid",
+          "name"
+        ],
+        "required": [
+          "name",
+          "uuid"
+        ],
+        "type": "object"
+      },
+      "title": "chattel",
+      "type": "array"
+    },
+    "children": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "title": "name",
+            "type": "string"
+          },
+          "uuid": {
+            "title": "uuid",
+            "type": "string"
+          }
+        },
+        "propertyOrder": [
+          "uuid",
+          "name"
+        ],
+        "required": [
+          "name",
+          "uuid"
+        ],
+        "type": "object"
+      },
+      "title": "children",
+      "type": "array"
+    },
+    "conditions": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "uuid": {
+            "title": "uuid",
+            "type": "string"
+          }
+        },
+        "propertyOrder": [
+          "uuid"
+        ],
+        "required": [
+          "uuid"
+        ],
+        "type": "object"
+      },
+      "title": "conditions",
+      "type": "array"
+    },
+    "cost": {
+      "title": "cost",
+      "type": "number"
+    },
+    "culture": {
+      "additionalProperties": false,
+      "properties": {
+        "uuid": {
+          "title": "uuid",
+          "type": "string"
+        }
+      },
+      "propertyOrder": [
+        "uuid"
+      ],
+      "required": [
+        "uuid"
+      ],
+      "title": "culture",
+      "type": "object"
+    },
+    "currentDialog": {
+      "title": "current Dialog",
+      "type": "number"
+    },
+    "death": {
+      "additionalProperties": false,
+      "properties": {
+        "date": {
+          "additionalProperties": false,
+          "properties": {
+            "text": {
+              "title": "text",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "text"
+          ],
+          "required": [
+            "text",
+            "uuid"
+          ],
+          "title": "date",
+          "type": "object"
+        },
+        "domain": {
+          "additionalProperties": false,
+          "properties": {
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid"
+          ],
+          "required": [
+            "uuid"
+          ],
+          "title": "domain",
+          "type": "object"
+        }
+      },
+      "propertyOrder": [
+        "domain",
+        "date"
+      ],
+      "required": [
+        "date",
+        "domain"
+      ],
+      "title": "death",
+      "type": "object"
+    },
+    "derivation": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "title": "name",
+          "type": "string"
+        },
+        "uuid": {
+          "title": "uuid",
+          "type": "string"
+        }
+      },
+      "propertyOrder": [
+        "uuid",
+        "name"
+      ],
+      "required": [
+        "name",
+        "uuid"
+      ],
+      "title": "derivation",
+      "type": "object"
+    },
+    "dialogs": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "uuid": {
+            "title": "uuid",
+            "type": "string"
+          }
+        },
+        "propertyOrder": [
+          "uuid"
+        ],
+        "required": [
+          "uuid"
+        ],
+        "type": "object"
+      },
+      "title": "dialogs",
+      "type": "array"
+    },
+    "domains": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "uuid": {
+            "title": "uuid",
+            "type": "string"
+          }
+        },
+        "propertyOrder": [
+          "uuid"
+        ],
+        "required": [
+          "uuid"
+        ],
+        "type": "object"
+      },
+      "title": "domains",
+      "type": "array"
+    },
+    "enemies": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "title": "name",
+            "type": "string"
+          },
+          "uuid": {
+            "title": "uuid",
+            "type": "string"
+          }
+        },
+        "propertyOrder": [
+          "uuid",
+          "name"
+        ],
+        "required": [
+          "name",
+          "uuid"
+        ],
+        "type": "object"
+      },
+      "title": "enemies",
+      "type": "array"
+    },
+    "equipment": {
+      "additionalProperties": false,
+      "properties": {
+        "abdomen": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "abdomen",
+          "type": "object"
+        },
+        "back": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "back",
+          "type": "object"
+        },
+        "chin": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "chin",
+          "type": "object"
+        },
+        "eyes": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "eyes",
+          "type": "object"
+        },
+        "groin": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "groin",
+          "type": "object"
+        },
+        "head": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "head",
+          "type": "object"
+        },
+        "leftAnkle": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "leftAnkle",
+          "type": "object"
+        },
+        "leftArm": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "leftArm",
+          "type": "object"
+        },
+        "leftBreast": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "leftBreast",
+          "type": "object"
+        },
+        "leftBrow": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "leftBrow",
+          "type": "object"
+        },
+        "leftEar": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "leftEar",
+          "type": "object"
+        },
+        "leftEye": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "leftEye",
+          "type": "object"
+        },
+        "leftFingers": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "leftFingers",
+          "type": "object"
+        },
+        "leftFoot": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "leftFoot",
+          "type": "object"
+        },
+        "leftGrip": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "leftGrip",
+          "type": "object"
+        },
+        "leftHand": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "leftHand",
+          "type": "object"
+        },
+        "leftKnee": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "leftKnee",
+          "type": "object"
+        },
+        "leftLeg": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "leftLeg",
+          "type": "object"
+        },
+        "leftShin": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "leftShin",
+          "type": "object"
+        },
+        "leftShoulder": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "leftShoulder",
+          "type": "object"
+        },
+        "leftThigh": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "leftThigh",
+          "type": "object"
+        },
+        "leftToes": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "leftToes",
+          "type": "object"
+        },
+        "leftWrist": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "leftWrist",
+          "type": "object"
+        },
+        "mount": {
+          "additionalProperties": false,
+          "properties": {
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid"
+          ],
+          "required": [
+            "uuid"
+          ],
+          "title": "mount",
+          "type": "object"
+        },
+        "mouth": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "mouth",
+          "type": "object"
+        },
+        "neck": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "neck",
+          "type": "object"
+        },
+        "nose": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "nose",
+          "type": "object"
+        },
+        "rear": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "rear",
+          "type": "object"
+        },
+        "rightAnkle": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "rightAnkle",
+          "type": "object"
+        },
+        "rightArm": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "rightArm",
+          "type": "object"
+        },
+        "rightBreast": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "rightBreast",
+          "type": "object"
+        },
+        "rightBrow": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "rightBrow",
+          "type": "object"
+        },
+        "rightEar": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "rightEar",
+          "type": "object"
+        },
+        "rightEye": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "rightEye",
+          "type": "object"
+        },
+        "rightFingers": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "rightFingers",
+          "type": "object"
+        },
+        "rightFoot": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "rightFoot",
+          "type": "object"
+        },
+        "rightGrip": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "rightGrip",
+          "type": "object"
+        },
+        "rightHand": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "rightHand",
+          "type": "object"
+        },
+        "rightKnee": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "rightKnee",
+          "type": "object"
+        },
+        "rightLeg": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "rightLeg",
+          "type": "object"
+        },
+        "rightShin": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "rightShin",
+          "type": "object"
+        },
+        "rightShoulder": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "rightShoulder",
+          "type": "object"
+        },
+        "rightThigh": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "rightThigh",
+          "type": "object"
+        },
+        "rightToes": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "rightToes",
+          "type": "object"
+        },
+        "rightWrist": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "rightWrist",
+          "type": "object"
+        },
+        "torso": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "torso",
+          "type": "object"
+        },
+        "waist": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "name",
+              "type": "string"
+            },
+            "nickcname": {
+              "title": "nickcname",
+              "type": "string"
+            },
+            "uuid": {
+              "title": "uuid",
+              "type": "string"
+            }
+          },
+          "propertyOrder": [
+            "uuid",
+            "name",
+            "nickcname"
+          ],
+          "required": [
+            "name",
+            "nickcname",
+            "uuid"
+          ],
+          "title": "waist",
+          "type": "object"
+        }
+      },
+      "propertyOrder": [
+        "head",
+        "leftBrow",
+        "leftEye",
+        "leftEar",
+        "rightBrow",
+        "rightEye",
+        "rightEar",
+        "eyes",
+        "nose",
+        "mouth",
+        "chin",
+        "neck",
+        "leftShoulder",
+        "leftBreast",
+        "leftArm",
+        "leftWrist",
+        "leftHand",
+        "leftFingers",
+        "leftGrip",
+        "rightShoulder",
+        "rightBreast",
+        "rightArm",
+        "rightWrist",
+        "rightHand",
+        "rightFingers",
+        "rightGrip",
+        "torso",
+        "back",
+        "abdomen",
+        "waist",
+        "groin",
+        "rear",
+        "leftThigh",
+        "leftLeg",
+        "leftKnee",
+        "leftShin",
+        "leftAnkle",
+        "leftFoot",
+        "leftToes",
+        "rightThigh",
+        "rightLeg",
+        "rightKnee",
+        "rightShin",
+        "rightAnkle",
+        "rightFoot",
+        "rightToes",
+        "mount"
+      ],
+      "required": [
+        "abdomen",
+        "back",
+        "chin",
+        "eyes",
+        "groin",
+        "head",
+        "leftAnkle",
+        "leftArm",
+        "leftBreast",
+        "leftBrow",
+        "leftEar",
+        "leftEye",
+        "leftFingers",
+        "leftFoot",
+        "leftGrip",
+        "leftHand",
+        "leftKnee",
+        "leftLeg",
+        "leftShin",
+        "leftShoulder",
+        "leftThigh",
+        "leftToes",
+        "leftWrist",
+        "mount",
+        "mouth",
+        "neck",
+        "nose",
+        "rear",
+        "rightAnkle",
+        "rightArm",
+        "rightBreast",
+        "rightBrow",
+        "rightEar",
+        "rightEye",
+        "rightFingers",
+        "rightFoot",
+        "rightGrip",
+        "rightHand",
+        "rightKnee",
+        "rightLeg",
+        "rightShin",
+        "rightShoulder",
+        "rightThigh",
+        "rightToes",
+        "rightWrist",
+        "torso",
+        "waist"
+      ],
+      "title": "equipment",
+      "type": "object"
+    },
+    "exhaustion": {
+      "title": "exhaustion",
+      "type": "number"
+    },
+    "factions": {
+      "additionalProperties": false,
+      "properties": {
+        "allies": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "uuid": {
+                "title": "uuid",
+                "type": "string"
+              }
+            },
+            "propertyOrder": [
+              "uuid"
+            ],
+            "required": [
+              "uuid"
+            ],
+            "type": "object"
+          },
+          "title": "allies",
+          "type": "array"
+        },
+        "enemies": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "uuid": {
+                "title": "uuid",
+                "type": "string"
+              }
+            },
+            "propertyOrder": [
+              "uuid"
+            ],
+            "required": [
+              "uuid"
+            ],
+            "type": "object"
+          },
+          "title": "enemies",
+          "type": "array"
+        },
+        "memberOf": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "uuid": {
+                "title": "uuid",
+                "type": "string"
+              }
+            },
+            "propertyOrder": [
+              "uuid"
+            ],
+            "required": [
+              "uuid"
+            ],
+            "type": "object"
+          },
+          "title": "member Of",
+          "type": "array"
+        }
+      },
+      "propertyOrder": [
+        "memberOf",
+        "allies",
+        "enemies"
+      ],
+      "required": [
+        "allies",
+        "enemies",
+        "memberOf"
+      ],
+      "title": "factions",
+      "type": "object"
+    },
+    "faith": {
+      "additionalProperties": false,
+      "properties": {
+        "uuid": {
+          "title": "uuid",
+          "type": "string"
+        }
+      },
+      "propertyOrder": [
+        "uuid"
+      ],
+      "required": [
+        "uuid"
+      ],
+      "title": "faith",
+      "type": "object"
+    },
+    "familiars": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "uuid": {
+            "title": "uuid",
+            "type": "string"
+          }
+        },
+        "propertyOrder": [
+          "uuid"
+        ],
+        "required": [
+          "uuid"
+        ],
+        "type": "object"
+      },
+      "title": "familiars",
+      "type": "array"
+    },
+    "family": {
+      "additionalProperties": false,
+      "properties": {
+        "uuid": {
+          "title": "uuid",
+          "type": "string"
+        }
+      },
+      "propertyOrder": [
+        "uuid"
+      ],
+      "required": [
+        "uuid"
+      ],
+      "title": "family",
+      "type": "object"
+    },
+    "father": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "title": "name",
+          "type": "string"
+        },
+        "uuid": {
+          "title": "uuid",
+          "type": "string"
+        }
+      },
+      "propertyOrder": [
+        "uuid",
+        "name"
+      ],
+      "required": [
+        "name",
+        "uuid"
+      ],
+      "title": "father",
+      "type": "object"
+    },
+    "features": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "uuid": {
+            "title": "uuid",
+            "type": "string"
+          }
+        },
+        "propertyOrder": [
+          "uuid"
+        ],
+        "required": [
+          "uuid"
+        ],
+        "type": "object"
+      },
+      "title": "features",
+      "type": "array"
+    },
+    "flaw": {
+      "title": "flaw",
+      "type": "string"
+    },
+    "hitDice": {
+      "items": {
+        "enum": [
+          "d10",
+          "d100",
+          "d12",
+          "d20",
+          "d4",
+          "d6",
+          "d8"
+        ],
+        "type": "string"
+      },
+      "title": "hit Dice",
+      "type": "array"
+    },
+    "honor": {
+      "title": "honor",
+      "type": "number"
+    },
+    "ideal": {
+      "title": "ideal",
+      "type": "string"
+    },
+    "initiative": {
+      "title": "initiative",
+      "type": "number"
+    },
+    "items": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "title": "name",
+            "type": "string"
+          },
+          "nickcname": {
+            "title": "nickcname",
+            "type": "string"
+          },
+          "uuid": {
+            "title": "uuid",
+            "type": "string"
+          }
+        },
+        "propertyOrder": [
+          "uuid",
+          "name",
+          "nickcname"
+        ],
+        "required": [
+          "name",
+          "nickcname",
+          "uuid"
+        ],
+        "type": "object"
+      },
+      "title": "items",
+      "type": "array"
+    },
+    "klass": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "title": "name",
+          "type": "string"
+        }
+      },
+      "propertyOrder": [
+        "name"
+      ],
+      "required": [
+        "name"
+      ],
+      "title": "Class",
+      "type": "object"
+    },
+    "knowledge": {
+      "items": {
+        "type": "string"
+      },
+      "title": "knowledge",
+      "type": "array"
+    },
+    "level": {
+      "title": "level",
+      "type": "number"
+    },
+    "liege": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "title": "name",
+          "type": "string"
+        },
+        "uuid": {
+          "title": "uuid",
+          "type": "string"
+        }
+      },
+      "propertyOrder": [
+        "uuid",
+        "name"
+      ],
+      "required": [
+        "name",
+        "uuid"
+      ],
+      "title": "liege",
+      "type": "object"
+    },
+    "magicItems": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "title": "name",
+            "type": "string"
+          },
+          "nickcname": {
+            "title": "nickcname",
+            "type": "string"
+          },
+          "uuid": {
+            "title": "uuid",
+            "type": "string"
+          }
+        },
+        "propertyOrder": [
+          "uuid",
+          "name",
+          "nickcname"
+        ],
+        "required": [
+          "name",
+          "nickcname",
+          "uuid"
+        ],
+        "type": "object"
+      },
+      "title": "magic Items",
+      "type": "array"
+    },
+    "mannerism": {
+      "title": "mannerism",
+      "type": "string"
+    },
+    "maxHP": {
+      "title": "max HP",
+      "type": "number"
+    },
+    "mother": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "title": "name",
+          "type": "string"
+        },
+        "uuid": {
+          "title": "uuid",
+          "type": "string"
+        }
+      },
+      "propertyOrder": [
+        "uuid",
+        "name"
+      ],
+      "required": [
+        "name",
+        "uuid"
+      ],
+      "title": "mother",
+      "type": "object"
     },
     "name": {
-      "type": "string",
-      "title": "Name"
+      "title": "name",
+      "type": "string"
+    },
+    "notes": {
+      "title": "notes",
+      "type": "string"
+    },
+    "personalityTraits": {
+      "items": {
+        "type": "string"
+      },
+      "title": "personality Traits",
+      "type": "array"
+    },
+    "piety": {
+      "title": "piety",
+      "type": "number"
+    },
+    "playerName": {
+      "title": "playerName",
+      "type": "string"
+    },
+    "power": {
+      "title": "power",
+      "type": "number"
+    },
+    "proficiencies": {
+      "additionalProperties": false,
+      "properties": {
+        "armors": {
+          "items": {
+            "enum": [
+              "heavy",
+              "light",
+              "medium",
+              "shield"
+            ],
+            "type": "string"
+          },
+          "title": "armors",
+          "type": "array"
+        },
+        "bonus": {
+          "title": "bonus",
+          "type": "number"
+        },
+        "languages": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "uuid": {
+                "title": "uuid",
+                "type": "string"
+              }
+            },
+            "propertyOrder": [
+              "uuid"
+            ],
+            "required": [
+              "uuid"
+            ],
+            "type": "object"
+          },
+          "title": "languages",
+          "type": "array"
+        },
+        "skills": {
+          "items": {
+            "enum": [
+              "acrobatics",
+              "animalhandling",
+              "arcana",
+              "athletics",
+              "deception",
+              "history",
+              "insight",
+              "intimidation",
+              "investigation",
+              "medicine",
+              "nature",
+              "perception",
+              "performance",
+              "persuasion",
+              "religion",
+              "sleightofhand",
+              "stealth",
+              "survival"
+            ],
+            "type": "string"
+          },
+          "title": "skills",
+          "type": "array"
+        },
+        "tools": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "uuid": {
+                "title": "uuid",
+                "type": "string"
+              }
+            },
+            "propertyOrder": [
+              "uuid"
+            ],
+            "required": [
+              "uuid"
+            ],
+            "type": "object"
+          },
+          "title": "tools",
+          "type": "array"
+        },
+        "transportation": {
+          "items": {
+            "enum": [
+              "air",
+              "animal",
+              "human",
+              "land",
+              "water"
+            ],
+            "type": "string"
+          },
+          "title": "transportation",
+          "type": "array"
+        },
+        "weapons": {
+          "items": {
+            "enum": [
+              "martial",
+              "simple"
+            ],
+            "type": "string"
+          },
+          "title": "weapons",
+          "type": "array"
+        }
+      },
+      "propertyOrder": [
+        "skills",
+        "languages",
+        "armors",
+        "weapons",
+        "transportation",
+        "tools",
+        "bonus"
+      ],
+      "required": [
+        "armors",
+        "bonus",
+        "languages",
+        "skills",
+        "tools",
+        "transportation",
+        "weapons"
+      ],
+      "title": "proficiencies",
+      "type": "object"
+    },
+    "quests": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "uuid": {
+            "title": "uuid",
+            "type": "string"
+          }
+        },
+        "propertyOrder": [
+          "uuid"
+        ],
+        "required": [
+          "uuid"
+        ],
+        "type": "object"
+      },
+      "title": "quests",
+      "type": "array"
+    },
+    "reputation": {
+      "title": "reputation",
+      "type": "number"
+    },
+    "resistance": {
+      "enum": [
+        "acid",
+        "bludgeoning",
+        "cold",
+        "fire",
+        "force",
+        "lightning",
+        "necrotic",
+        "piercing",
+        "poison",
+        "psychic",
+        "radiant",
+        "slashing",
+        "thunder"
+      ],
+      "title": "resistance",
+      "type": "string"
+    },
+    "siblings": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "title": "name",
+            "type": "string"
+          },
+          "uuid": {
+            "title": "uuid",
+            "type": "string"
+          }
+        },
+        "propertyOrder": [
+          "uuid",
+          "name"
+        ],
+        "required": [
+          "name",
+          "uuid"
+        ],
+        "type": "object"
+      },
+      "title": "siblings",
+      "type": "array"
+    },
+    "specialty": {
+      "title": "specialty",
+      "type": "string"
+    },
+    "speed": {
+      "title": "speed",
+      "type": "number"
+    },
+    "spellcasting": {
+      "additionalProperties": false,
+      "properties": {
+        "ability": {
+          "enum": [
+            "charisma",
+            "constitution",
+            "dexterity",
+            "intelligence",
+            "strength",
+            "wisdom"
+          ],
+          "title": "ability",
+          "type": "string"
+        },
+        "attackModifier": {
+          "title": "attack Modifier",
+          "type": "number"
+        },
+        "saveDC": {
+          "title": "save DC",
+          "type": "number"
+        },
+        "spells": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "uuid": {
+                "title": "uuid",
+                "type": "string"
+              }
+            },
+            "propertyOrder": [
+              "uuid"
+            ],
+            "required": [
+              "uuid"
+            ],
+            "type": "object"
+          },
+          "title": "spells",
+          "type": "array"
+        }
+      },
+      "propertyOrder": [
+        "ability",
+        "saveDC",
+        "attackModifier",
+        "spells"
+      ],
+      "required": [
+        "ability",
+        "attackModifier",
+        "saveDC",
+        "spells"
+      ],
+      "title": "spellcasting",
+      "type": "object"
+    },
+    "spouse": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "title": "name",
+          "type": "string"
+        },
+        "uuid": {
+          "title": "uuid",
+          "type": "string"
+        }
+      },
+      "propertyOrder": [
+        "uuid",
+        "name"
+      ],
+      "required": [
+        "name",
+        "uuid"
+      ],
+      "title": "spouse",
+      "type": "object"
+    },
+    "stories": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "uuid": {
+            "title": "uuid",
+            "type": "string"
+          }
+        },
+        "propertyOrder": [
+          "uuid"
+        ],
+        "required": [
+          "uuid"
+        ],
+        "type": "object"
+      },
+      "title": "stories",
+      "type": "array"
+    },
+    "talent": {
+      "title": "talent",
+      "type": "string"
+    },
+    "tempHP": {
+      "title": "temp HP",
+      "type": "number"
+    },
+    "titles": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "uuid": {
+            "title": "uuid",
+            "type": "string"
+          }
+        },
+        "propertyOrder": [
+          "uuid"
+        ],
+        "required": [
+          "uuid"
+        ],
+        "type": "object"
+      },
+      "title": "titles",
+      "type": "array"
+    },
+    "trait": {
+      "title": "trait",
+      "type": "string"
+    },
+    "treasury": {
+      "additionalProperties": false,
+      "properties": {
+        "cp": {
+          "title": "cp",
+          "type": "number"
+        },
+        "ep": {
+          "title": "ep",
+          "type": "number"
+        },
+        "gp": {
+          "title": "gp",
+          "type": "number"
+        },
+        "pp": {
+          "title": "pp",
+          "type": "number"
+        },
+        "sp": {
+          "title": "sp",
+          "type": "number"
+        }
+      },
+      "propertyOrder": [
+        "cp",
+        "sp",
+        "ep",
+        "gp",
+        "pp"
+      ],
+      "required": [
+        "cp",
+        "ep",
+        "gp",
+        "pp",
+        "sp"
+      ],
+      "title": "treasury",
+      "type": "object"
+    },
+    "type": {
+      "enum": [
+        "nonPlayable",
+        "playable"
+      ],
+      "title": "type",
+      "type": "string"
+    },
+    "uuid": {
+      "title": "uuid",
+      "type": "string"
+    },
+    "vehicles": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "title": "name",
+            "type": "string"
+          },
+          "nickname": {
+            "title": "nickname",
+            "type": "string"
+          },
+          "uuid": {
+            "title": "uuid",
+            "type": "string"
+          }
+        },
+        "propertyOrder": [
+          "uuid",
+          "name",
+          "nickname"
+        ],
+        "required": [
+          "name",
+          "nickname",
+          "uuid"
+        ],
+        "type": "object"
+      },
+      "title": "vehicles",
+      "type": "array"
+    },
+    "version": {
+      "title": "version",
+      "type": "string"
+    },
+    "vulnerability": {
+      "enum": [
+        "acid",
+        "bludgeoning",
+        "cold",
+        "fire",
+        "force",
+        "lightning",
+        "necrotic",
+        "piercing",
+        "poison",
+        "psychic",
+        "radiant",
+        "slashing",
+        "thunder"
+      ],
+      "title": "vulnerability",
+      "type": "string"
+    },
+    "weight": {
+      "title": "weight",
+      "type": "number"
     }
-  }
+  },
+  "propertyOrder": [
+    "uuid",
+    "version",
+    "playerName",
+    "name",
+    "type",
+    "abstract",
+    "abstractProperties",
+    "derivation",
+    "level",
+    "XP",
+    "age",
+    "ageGroup",
+    "power",
+    "honor",
+    "piety",
+    "reputation",
+    "treasury",
+    "cost",
+    "abilities",
+    "proficiencies",
+    "initiative",
+    "speed",
+    "AC",
+    "hitDice",
+    "maxHP",
+    "tempHP",
+    "HP",
+    "conditions",
+    "exhaustion",
+    "resistance",
+    "vulnerability",
+    "alignment",
+    "klass",
+    "spellcasting",
+    "culture",
+    "faith",
+    "mother",
+    "father",
+    "siblings",
+    "spouse",
+    "children",
+    "family",
+    "liege",
+    "allies",
+    "enemies",
+    "factions",
+    "birth",
+    "death",
+    "features",
+    "actions",
+    "items",
+    "magicItems",
+    "weight",
+    "capacity",
+    "equipment",
+    "chattel",
+    "domains",
+    "buildings",
+    "titles",
+    "familiars",
+    "vehicles",
+    "trait",
+    "characteristic",
+    "mannerism",
+    "talent",
+    "personalityTraits",
+    "ideal",
+    "bond",
+    "flaw",
+    "background",
+    "specialty",
+    "knowledge",
+    "backstory",
+    "campaigns",
+    "activeCampaign",
+    "quests",
+    "stories",
+    "dialogs",
+    "currentDialog",
+    "notes"
+  ],
+  "required": [
+    "uuid"
+  ]
 }
