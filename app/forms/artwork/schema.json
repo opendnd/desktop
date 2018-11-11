@@ -4,15 +4,26 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "additionalProperties": false,
   "properties": {
+    "name": {
+      "title": "name",
+      "type": "string"
+    },
     "uuid": {
       "title": "uuid",
+      "type": "string"
+    },
+    "version": {
+      "title": "version",
       "type": "string"
     }
   },
   "propertyOrder": [
-    "uuid"
+    "uuid",
+    "version",
+    "name"
   ],
   "required": [
+    "name",
     "uuid"
   ],
   "type": "object"

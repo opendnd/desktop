@@ -1,9 +1,14 @@
 import * as React from 'react';
 import Typography from '@material-ui/core/Typography';
 import { Person } from 'opendnd-core';
+import { withStyles } from '@material-ui/core/styles';
 
 const uuidv1 = require('uuid/v1');
 const MUIForm = require('material-ui-jsonschema-form');
+
+const styles = () => ({
+  root: {},
+});
 
 export interface ISchema {
   title: string
@@ -17,6 +22,7 @@ export interface IProps {
   schema: object
   uiSchema: object
   formData: object
+  classes: object
 }
 
 export interface IState {
@@ -27,7 +33,7 @@ export interface IState {
   action: string
 }
 
-export default class Form extends React.Component<IProps> {
+class Form extends React.Component<IProps> {
   constructor(props:IProps) {
     super(props);
 
@@ -93,6 +99,7 @@ export default class Form extends React.Component<IProps> {
                   onCancel={this.handleCancel}
                   onSubmit={this.handleSubmit}
                   onChange={this.handleChange}
+                  classes={this.props.classes}
                 />
               </div>
             </div>
@@ -102,3 +109,5 @@ export default class Form extends React.Component<IProps> {
     );
   }
 }
+
+export default withStyles(styles)(Form);

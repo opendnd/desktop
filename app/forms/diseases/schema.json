@@ -207,10 +207,15 @@
       ],
       "title": "vulnerability",
       "type": "string"
+    },
+    "version": {
+      "title": "version",
+      "type": "string"
     }
   },
   "propertyOrder": [
     "uuid",
+    "version",
     "name",
     "abstract",
     "abstractProperties",
