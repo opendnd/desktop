@@ -72,9 +72,9 @@ app.on('ready', () =>
 
   if (process.platform === 'darwin') {
     template = [{
-      label: 'Electron',
+      label: 'OpenDnD',
       submenu: [{
-        label: 'About ElectronReact',
+        label: 'About OpenDnD',
         selector: 'orderFrontStandardAboutPanel:'
       }, {
         type: 'separator'
@@ -84,7 +84,7 @@ app.on('ready', () =>
       }, {
         type: 'separator'
       }, {
-        label: 'Hide ElectronReact',
+        label: 'Hide OpenDnD',
         accelerator: 'Command+H',
         selector: 'hide:'
       }, {

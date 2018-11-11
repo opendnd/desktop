@@ -50,6 +50,17 @@ body {
   }
 }
 
+#dashboard {
+  .Paper {
+    margin: 10px 0;
+    padding: 15px;
+
+    button {
+      margin: 10px 0;
+    }
+  }
+}
+
 #root-children {
   padding: 1rem;
 }

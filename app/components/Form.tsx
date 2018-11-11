@@ -5,6 +5,8 @@ import { withStyles } from '@material-ui/core/styles';
 
 const uuidv1 = require('uuid/v1');
 const MUIForm = require('material-ui-jsonschema-form');
+// const fs = require('fs');
+// const settings = require('electron-settings');
 
 const styles = () => ({
   root: {},
@@ -33,6 +35,10 @@ export interface IState {
   action: string
 }
 
+export interface IMUIForm {
+  formData: object
+}
+
 class Form extends React.Component<IProps> {
   constructor(props:IProps) {
     super(props);
@@ -45,7 +51,7 @@ class Form extends React.Component<IProps> {
       formData,
       display: true,
       action: 'New',
-    }
+    };
   }
 
   componentWillReceiveProps(props:IProps) {
@@ -68,12 +74,18 @@ class Form extends React.Component<IProps> {
     console.log('cancel!');
   }
 
-  handleSubmit = () => {
-    console.log('submit!');
+  handleSubmit = (data:IMUIForm) => {
+    const { formData } = data;
+    this.setState({
+      formData,
+    });
   }
   
-  handleChange = () => {
-    console.log('change!');
+  handleChange = (data:IMUIForm) => {
+    const { formData } = data;
+    this.setState({
+      formData,
+    });
   }
 
   render() {
