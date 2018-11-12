@@ -115,9 +115,11 @@ export default () => (
     <Switch>
       <Route path='/artwork' render={(props) => (
         <FormPage
-        schema={schemas['artwork']}
-        uiSchema={uiSchemas['artwork']}
-        formData={formData['artwork']}
+          schema={schemas['artwork']}
+          uiSchema={uiSchemas['artwork']}
+          formData={formData['artwork']}
+          resource="Artwork"
+          resources="artwork"
         {...props} 
         />
       )} />
@@ -126,6 +128,8 @@ export default () => (
           schema={schemas['backgrounds']}
           uiSchema={uiSchemas['backgrounds']}
           formData={formData['backgrounds']}
+          resource="Background"
+          resources="backgrounds"
           {...props} 
         />
       )} />
@@ -134,6 +138,8 @@ export default () => (
           schema={schemas['buildings']}
           uiSchema={uiSchemas['buildings']}
           formData={formData['buildings']}
+          resource="Building"
+          resources="buildings"
           {...props} 
         />
       )} />
@@ -142,6 +148,8 @@ export default () => (
           schema={schemas['calendars']}
           uiSchema={uiSchemas['calendars']}
           formData={formData['calendars']}
+          resource="Calendar"
+          resources="calendars"
           {...props} 
         />
       )} />
@@ -150,6 +158,8 @@ export default () => (
           schema={schemas['campaigns']}
           uiSchema={uiSchemas['campaigns']}
           formData={formData['campaigns']}
+          resource="Campaign"
+          resources="campaigns"
           {...props} 
         />
       )} />
@@ -158,6 +168,8 @@ export default () => (
           schema={schemas['classes']}
           uiSchema={uiSchemas['classes']}
           formData={formData['classes']}
+          resource="Klass"
+          resources="klasses"
           {...props} 
         />
       )} />
@@ -166,6 +178,8 @@ export default () => (
           schema={schemas['cultures']}
           uiSchema={uiSchemas['cultures']}
           formData={formData['cultures']}
+          resource="Culture"
+          resources="cultures"
           {...props} 
         />
       )} />
@@ -174,6 +188,8 @@ export default () => (
           schema={schemas['dialogs']}
           uiSchema={uiSchemas['dialogs']}
           formData={formData['dialogs']}
+          resource="Dialog"
+          resources="dialogs"
           {...props} 
         />
       )} />
@@ -182,6 +198,8 @@ export default () => (
           schema={schemas['diseases']}
           uiSchema={uiSchemas['diseases']}
           formData={formData['diseases']}
+          resource="Disease"
+          resources="diseases"
           {...props} 
         />
       )} />
@@ -190,6 +208,8 @@ export default () => (
           schema={schemas['dna']}
           uiSchema={uiSchemas['dna']}
           formData={formData['dna']}
+          resource="DNA"
+          resources="dna"
           {...props} 
         />
       )} />
@@ -198,6 +218,8 @@ export default () => (
           schema={schemas['domains']}
           uiSchema={uiSchemas['domains']}
           formData={formData['domains']}
+          resource="domains"
+          resources="domains"
           {...props} 
         />
       )} />
@@ -206,6 +228,8 @@ export default () => (
           schema={schemas['dungeons']}
           uiSchema={uiSchemas['dungeons']}
           formData={formData['dungeons']}
+          resource="Dungeon"
+          resources="dungeons"
           {...props} 
         />
       )} />
@@ -214,6 +238,8 @@ export default () => (
           schema={schemas['dynasties']}
           uiSchema={uiSchemas['dynasties']}
           formData={formData['dynasties']}
+          resource="Dynasty"
+          resources="dynasties"
           {...props} 
         />
       )} />
@@ -222,6 +248,8 @@ export default () => (
           schema={schemas['encounters']}
           uiSchema={uiSchemas['encounters']}
           formData={formData['encounters']}
+          resource="Encounter"
+          resources="encounters"
           {...props} 
         />
       )} />
@@ -230,6 +258,8 @@ export default () => (
           schema={schemas['factions']}
           uiSchema={uiSchemas['factions']}
           formData={formData['factions']}
+          resource="Faction"
+          resources="factions"
           {...props} 
         />
       )} />
@@ -238,6 +268,8 @@ export default () => (
           schema={schemas['familiars']}
           uiSchema={uiSchemas['familiars']}
           formData={formData['familiars']}
+          resource="Familiar"
+          resources="familiars"
           {...props} 
         />
       )} />
@@ -246,6 +278,8 @@ export default () => (
           schema={schemas['features']}
           uiSchema={uiSchemas['features']}
           formData={formData['features']}
+          resource="Feature"
+          resources="features"
           {...props} 
         />
       )} />
@@ -254,6 +288,8 @@ export default () => (
           schema={schemas['items']}
           uiSchema={uiSchemas['items']}
           formData={formData['items']}
+          resource="Item"
+          resources="items"
           {...props} 
         />
       )} />
@@ -262,6 +298,8 @@ export default () => (
           schema={schemas['languages']}
           uiSchema={uiSchemas['languages']}
           formData={formData['languages']}
+          resource="Language"
+          resources="languages"
           {...props} 
         />
       )} />
@@ -270,6 +308,8 @@ export default () => (
           schema={schemas['monsters']}
           uiSchema={uiSchemas['monsters']}
           formData={formData['monsters']}
+          resource="Monster"
+          resources="monsters"
           {...props} 
         />
       )} />
@@ -278,6 +318,8 @@ export default () => (
           schema={schemas['names']}
           uiSchema={uiSchemas['names']}
           formData={formData['names']}
+          resource="Name"
+          resources="names"
           {...props} 
         />
       )} />
@@ -286,6 +328,8 @@ export default () => (
           schema={schemas['persons']}
           uiSchema={uiSchemas['persons']}
           formData={formData['persons']}
+          resource="Person"
+          resources="persons"
           {...props} 
         />
       )} />
@@ -294,6 +338,8 @@ export default () => (
           schema={schemas['races']}
           uiSchema={uiSchemas['races']}
           formData={formData['races']}
+          resource="Race"
+          resources="races"
           {...props} 
         />
       )} />
@@ -302,6 +348,8 @@ export default () => (
           schema={schemas['quests']}
           uiSchema={uiSchemas['quests']}
           formData={formData['quests']}
+          resource="Quest"
+          resources="quests"
           {...props} 
         />
       )} />
@@ -310,6 +358,8 @@ export default () => (
           schema={schemas['religions']}
           uiSchema={uiSchemas['religions']}
           formData={formData['religions']}
+          resource="Religion"
+          resources="religions"
           {...props} 
         />
       )} />
@@ -318,6 +368,8 @@ export default () => (
           schema={schemas['sayings']}
           uiSchema={uiSchemas['sayings']}
           formData={formData['sayings']}
+          resource="Saying"
+          resources="sayings"
           {...props} 
         />
       )} />
@@ -326,6 +378,8 @@ export default () => (
           schema={schemas['sigils']}
           uiSchema={uiSchemas['sigils']}
           formData={formData['sigils']}
+          resource="Sigil"
+          resources="sigils"
           {...props} 
         />
       )} />
@@ -334,6 +388,8 @@ export default () => (
           schema={schemas['spells']}
           uiSchema={uiSchemas['spells']}
           formData={formData['spells']}
+          resource="Spell"
+          resources="spells"
           {...props} 
         />
       )} />
@@ -342,6 +398,8 @@ export default () => (
           schema={schemas['stories']}
           uiSchema={uiSchemas['stories']}
           formData={formData['stories']}
+          resource="Story"
+          resources="stories"
           {...props} 
         />
       )} />
@@ -350,6 +408,8 @@ export default () => (
           schema={schemas['titles']}
           uiSchema={uiSchemas['titles']}
           formData={formData['titles']}
+          resource="Title"
+          resources="titles"
           {...props} 
         />
       )} />
@@ -358,6 +418,8 @@ export default () => (
           schema={schemas['traps']}
           uiSchema={uiSchemas['traps']}
           formData={formData['traps']}
+          resource="Trap"
+          resources="traps"
           {...props} 
         />
       )} />
@@ -366,6 +428,8 @@ export default () => (
           schema={schemas['vehicles']}
           uiSchema={uiSchemas['vehicles']}
           formData={formData['vehicles']}
+          resource="Vehicle"
+          resources="vehicles"
           {...props} 
         />
       )} />

@@ -7,7 +7,7 @@ import Paper from '@material-ui/core/Paper';
 
 const electron = require('electron');
 const settings = require('electron-settings');
-const remote = electron.remote;
+const { remote } = electron;
 
 let styles = require('./Dashboard.scss');
 
@@ -40,8 +40,8 @@ export default class Dashboard extends React.Component {
     return (
       <div>
         <div className={styles.container} data-tid="container" id="dashboard">
-          <Typography variant="title" color="inherit">
-            Data Folder:
+          <Typography variant="h6" color="inherit">
+            Data Folder
           </Typography>
           <Paper className="Paper">
             <InputLabel>
@@ -56,7 +56,7 @@ export default class Dashboard extends React.Component {
             />
             <Button 
               color="primary"
-              variant="raised"
+              variant="contained"
               onClick={this.handleFolderClick}
             >
               Select Directory

@@ -5,18 +5,14 @@ export interface IProps {
   schema: object
   uiSchema: object
   formData: object
+  resource: string
+  resources: string
 }
 
 export class FormPage extends React.Component<IProps> {
   render() {
-    const { schema, uiSchema, formData } = this.props;
-
     return (
-      <Form
-        schema={schema}
-        uiSchema={uiSchema}
-        formData={formData}
-      />
+      <Form {...this.props} />
     );
   }
 }

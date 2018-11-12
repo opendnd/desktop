@@ -286,11 +286,16 @@
     "version": {
       "title": "version",
       "type": "string"
+    },
+    "name": {
+      "title": "name",
+      "type": "string"
     }
   },
   "propertyOrder": [
     "uuid",
     "version",
+    "name",
     "specialties",
     "personalityTraits",
     "ideals",
@@ -300,6 +305,7 @@
     "features"
   ],
   "required": [
-    "uuid"
+    "uuid",
+    "name"
   ]
 }
