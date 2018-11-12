@@ -6,12 +6,49 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Paper from '@material-ui/core/Paper';
 import { withStyles } from '@material-ui/core/styles';
 
+const pinfo = require('../../package.json');
 const uuidv1 = require('uuid/v1');
 const MUIForm = require('material-ui-jsonschema-form');
 const fs = require('fs');
 const settings = require('electron-settings');
 // const electron = require('electron');
 // const { remote } = electron;
+
+const linkedMapping:{[key:string]: string} = {
+  'ILinkArtwork': 'artwork',
+  'ILinkBackground': 'backgrounds',
+  'ILinkBuilding': 'buildings',
+  'ILinkCalendar': 'calendars',
+  'ILinkCampaign': 'campaigns',
+  'ILinkCulture': 'cultures',
+  'ILinkDialog': 'dialogs',
+  'ILinkDisease': 'diseases',
+  'ILinkDNA': 'dna',
+  'ILinkDomain': 'domains',
+  'ILinkDungeon': 'dungeons',
+  'ILinkDynasty': 'dynasties',
+  'ILinkEncounter': 'encounters',
+  'ILinkFaction': 'factions',
+  'ILinkFamiliar': 'familiars',
+  'ILinkFeature': 'features',
+  'ILinkItem': 'items',
+  'ILinkKlass': 'klasses',
+  'ILinkLanguage': 'languages',
+  'ILinkMonster': 'monsters',
+  'ILinkName': 'names',
+  'ILinkPerson': 'persons',
+  'ILinkQuest': 'quests',
+  'ILinkRace': 'races',
+  'ILinkReligion': 'religions',
+  'ILinkSaying': 'sayings',
+  'ILinkSigil': 'sigils',
+  'ILinkSpell': 'spells',
+  'ILinkStory': 'stories',
+  'ILinkTitle': 'titles',
+  'ILinkTool': 'tools',
+  'ILinkTrap': 'traps',
+  'ILinkVehicle': 'vehicles',
+};
 
 const styles = () => ({
   root: {},
@@ -67,6 +104,8 @@ export interface IMUIForm {
 }
 
 class Form extends React.Component<IProps> {
+  state:IState
+
   constructor(props:IProps) {
     super(props);
 
@@ -74,7 +113,7 @@ class Form extends React.Component<IProps> {
 
     this.state = {
       schema,
-      mySchema: this.cloneSchema(schema),
+      mySchema: this.cloneSchema(schema, resources),
       uiSchema,
       formData,
       myFormData: this.cloneFormData(formData),
@@ -92,7 +131,7 @@ class Form extends React.Component<IProps> {
     this.setState({
       action: Actions.Render,
       schema,
-      mySchema: this.cloneSchema(schema),
+      mySchema: this.cloneSchema(schema, resources),
       uiSchema,
       formData,
       myFormData: this.cloneFormData(formData),
@@ -106,9 +145,65 @@ class Form extends React.Component<IProps> {
     })
   }
 
-  cloneSchema = (schema:ISchema) => {
+  // this takes a prop and converts to enum choices
+  createChoices = (prop:any, options:string[]) => {
+    prop.type = 'string';
+    prop.enum = options;
+
+    delete prop.properties;
+    delete prop.additionalProperties;
+    delete prop.propertyOrder;
+    delete prop.required;
+  }
+
+  // this takes a prop and converts to an array of enum choices
+  createArrayChoices = (prop:any, options:string[]) => {
+    prop.type = 'array';
+    prop.items = {
+      enum: options,
+    };
+
+    delete prop.properties;
+    delete prop.additionalProperties;
+    delete prop.propertyOrder;
+    delete prop.required;
+  }
+
+  cloneSchema = (schema:ISchema, resources:string) => {
     const mySchema = Object.assign({}, schema);
     mySchema.title = schema.description;
+
+    // check for linkings
+    Object.keys(mySchema.properties).forEach((key) => {
+      const prop = mySchema.properties[key];
+      if (prop.description) {
+
+        // check for linking
+        if (prop.description.includes('@link')) {
+          const found = prop.description.match(/\@link\:(\w+)\[?\]?/gi);
+          if (found.length > 0) {
+            const link:string = found[0].replace('@link:', '');
+            const rawLink:string = link.replace('[]', '');
+            let linkedResources:string = resources;
+
+            // get linked resource if it's not itself
+            if (rawLink !== 'ILinkResource') linkedResources = linkedMapping[rawLink];
+
+            // get the options
+            const options = this.listResources(linkedResources).map((linkedResource) => {
+              return linkedResource.name;
+            });
+
+            // handle as array
+            if (link.includes('[]')) {
+              this.createArrayChoices(prop, options);
+            } else {
+              this.createChoices(prop, options);
+            }
+          }
+        }
+      }
+    });
 
     return mySchema;
   }
@@ -116,11 +211,12 @@ class Form extends React.Component<IProps> {
   cloneFormData = (formData:any) => {
     const myFormData = Object.assign({}, formData);
     myFormData.uuid = uuidv1();
+    myFormData.version = pinfo.version;
 
     return myFormData;
   }
 
-  listResources = (resources:string) => {
+  listResources = (resources:string):IResourceLink[] => {
     const folder = `${settings.get('dataFolder')}/${resources}`;
     if (!fs.existsSync(folder)) fs.mkdirSync(folder);
     const rootPath = `${folder}/${resources}.json`;
@@ -139,16 +235,17 @@ class Form extends React.Component<IProps> {
 
   handleSubmit = (data:IMUIForm) => {
     const { formData:myFormData } = data;
-    const { resources, schema } = this.state as IState;
+    const { resources } = this.state;
     const folder = `${settings.get('dataFolder')}/${resources}`;
     const rootPath = `${folder}/${resources}.json`;
     const filepath = `${folder}/${myFormData.uuid}.json`;
     let valid = true;
 
+    // TODO: revisit valid / error checking
     // check for top-level required fields
-    schema.required.forEach((required) => {
-      if (!myFormData[required]) valid = false;
-    });
+    // schema.required.forEach((required) => {
+    //   if (!myFormData[required]) valid = false;
+    // });
 
     if (valid) {
       // get the root path and write
@@ -179,7 +276,7 @@ class Form extends React.Component<IProps> {
   }
 
   handleNew = () => {
-    const { formData } = this.state as IState;
+    const { formData } = this.state;
     this.setState({
       action: Actions.New,
       myFormData: this.cloneFormData(formData),
@@ -187,7 +284,7 @@ class Form extends React.Component<IProps> {
   }
 
   handleModify = (e:React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement | HTMLSelectElement>) => {
-    const { resources } = this.state as IState;
+    const { resources } = this.state;
     const folder = `${settings.get('dataFolder')}/${resources}`;
     const uuid = e.target.value;
     const filepath = `${folder}/${uuid}.json`;
@@ -204,7 +301,7 @@ class Form extends React.Component<IProps> {
   }
 
   handleDelete = () => {
-    const { myFormData, resources } = this.state as IState;
+    const { myFormData, resources } = this.state;
     const folder = `${settings.get('dataFolder')}/${resources}`;
     const { uuid } = myFormData;
     const filepath = `${folder}/${uuid}.json`;
@@ -228,7 +325,7 @@ class Form extends React.Component<IProps> {
   }
 
   render() {
-    const { schema, mySchema, uiSchema, myFormData, action, resource, resources, resourceData } = this.state as IState;
+    const { schema, mySchema, uiSchema, myFormData, action, resource, resources, resourceData } = this.state;
 
     return (
       <div>
@@ -255,6 +352,15 @@ class Form extends React.Component<IProps> {
             case Actions.Modify:
               return (
                 <div>
+                  <div className="pull-right">
+                    <Button 
+                      variant="contained"
+                      color="secondary"
+                      onClick={this.handleDelete}
+                    >
+                      Delete
+                    </Button>
+                  </div>
                   <Typography variant="h6" color="inherit">{`${action} ${schema.title}`}</Typography>
                   <div id="mui-form">
                     <MUIForm
@@ -267,13 +373,6 @@ class Form extends React.Component<IProps> {
                       classes={this.props.classes}
                     />
                   </div>
-                  <Button 
-                    variant="contained"
-                    color="secondary"
-                    onClick={this.handleDelete}
-                  >
-                    Delete
-                  </Button>
                 </div>
               );
             

@@ -4,41 +4,7 @@ import { Switch, Route } from 'react-router';
 import App from './containers/App';
 import DashboardPage from './containers/DashboardPage';
 import FormPage from './containers/FormPage';
-
-const schemas = {
-  artwork: require('./forms/artwork/schema'),
-  backgrounds: require('./forms/backgrounds/schema'),
-  buildings: require('./forms/buildings/schema'),
-  calendars: require('./forms/calendars/schema'),
-  campaigns: require('./forms/campaigns/schema'),
-  classes: require('./forms/classes/schema'),
-  cultures: require('./forms/cultures/schema'),
-  dialogs: require('./forms/dialogs/schema'),
-  diseases: require('./forms/diseases/schema'),
-  dna: require('./forms/dna/schema'),
-  domains: require('./forms/domains/schema'),
-  dungeons: require('./forms/dungeons/schema'),
-  dynasties: require('./forms/dynasties/schema'),
-  encounters: require('./forms/encounters/schema'),
-  factions: require('./forms/factions/schema'),
-  familiars: require('./forms/familiars/schema'),
-  features: require('./forms/features/schema'),
-  items: require('./forms/items/schema'),
-  languages: require('./forms/languages/schema'),
-  monsters: require('./forms/monsters/schema'),
-  names: require('./forms/names/schema'),
-  persons: require('./forms/persons/schema'),
-  races: require('./forms/races/schema'),
-  quests: require('./forms/quests/schema'),
-  religions: require('./forms/religions/schema'),
-  sayings: require('./forms/sayings/schema'),
-  sigils: require('./forms/sigils/schema'),
-  spells: require('./forms/spells/schema'),
-  stories: require('./forms/stories/schema'),
-  titles: require('./forms/titles/schema'),
-  traps: require('./forms/traps/schema'),
-  vehicles: require('./forms/vehicles/schema'),
-};
+import { schemas } from 'opendnd-core';
 
 const uiSchemas = {
   artwork: require('./forms/artwork/ui-schema'),
@@ -46,7 +12,6 @@ const uiSchemas = {
   buildings: require('./forms/buildings/ui-schema'),
   calendars: require('./forms/calendars/ui-schema'),
   campaigns: require('./forms/campaigns/ui-schema'),
-  classes: require('./forms/classes/ui-schema'),
   cultures: require('./forms/cultures/ui-schema'),
   dialogs: require('./forms/dialogs/ui-schema'),
   diseases: require('./forms/diseases/ui-schema'),
@@ -59,6 +24,7 @@ const uiSchemas = {
   familiars: require('./forms/familiars/ui-schema'),
   features: require('./forms/features/ui-schema'),
   items: require('./forms/items/ui-schema'),
+  klasses: require('./forms/klasses/ui-schema'),
   languages: require('./forms/languages/ui-schema'),
   monsters: require('./forms/monsters/ui-schema'),
   names: require('./forms/names/ui-schema'),
@@ -81,7 +47,6 @@ const formData = {
   buildings: require('./forms/buildings/form-data'),
   calendars: require('./forms/calendars/form-data'),
   campaigns: require('./forms/campaigns/form-data'),
-  classes: require('./forms/classes/form-data'),
   cultures: require('./forms/cultures/form-data'),
   dialogs: require('./forms/dialogs/form-data'),
   diseases: require('./forms/diseases/form-data'),
@@ -94,6 +59,7 @@ const formData = {
   familiars: require('./forms/familiars/form-data'),
   features: require('./forms/features/form-data'),
   items: require('./forms/items/form-data'),
+  klasses: require('./forms/klasses/form-data'),
   languages: require('./forms/languages/form-data'),
   monsters: require('./forms/monsters/form-data'),
   names: require('./forms/names/form-data'),
@@ -160,16 +126,6 @@ export default () => (
           formData={formData['campaigns']}
           resource="Campaign"
           resources="campaigns"
-          {...props} 
-        />
-      )} />
-      <Route path='/classes' render={(props) => (
-        <FormPage
-          schema={schemas['classes']}
-          uiSchema={uiSchemas['classes']}
-          formData={formData['classes']}
-          resource="Klass"
-          resources="klasses"
           {...props} 
         />
       )} />
@@ -290,6 +246,16 @@ export default () => (
           formData={formData['items']}
           resource="Item"
           resources="items"
+          {...props} 
+        />
+      )} />
+      <Route path='/klasses' render={(props) => (
+        <FormPage
+          schema={schemas['klasses']}
+          uiSchema={uiSchemas['klasses']}
+          formData={formData['klasses']}
+          resource="Klass"
+          resources="klasses"
           {...props} 
         />
       )} />
