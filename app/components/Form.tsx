@@ -121,6 +121,7 @@ class Form extends React.Component<IProps> {
   }
 
   listResources = (resources:string) => {
+    if (settings.get('dataFolder') === undefined) return [];
     const folder = `${settings.get('dataFolder')}/${resources}`;
     if (!fs.existsSync(folder)) fs.mkdirSync(folder);
     const rootPath = `${folder}/${resources}.json`;
@@ -138,6 +139,7 @@ class Form extends React.Component<IProps> {
   }
 
   handleSubmit = (data:IMUIForm) => {
+    if (settings.get('dataFolder') === undefined) return;
     const { formData:myFormData } = data;
     const { resources, schema } = this.state as IState;
     const folder = `${settings.get('dataFolder')}/${resources}`;
@@ -187,6 +189,7 @@ class Form extends React.Component<IProps> {
   }
 
   handleModify = (e:React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement | HTMLSelectElement>) => {
+    if (settings.get('dataFolder') === undefined) return;
     const { resources } = this.state as IState;
     const folder = `${settings.get('dataFolder')}/${resources}`;
     const uuid = e.target.value;
@@ -204,6 +207,7 @@ class Form extends React.Component<IProps> {
   }
 
   handleDelete = () => {
+    if (settings.get('dataFolder') === undefined) return;
     const { myFormData, resources } = this.state as IState;
     const folder = `${settings.get('dataFolder')}/${resources}`;
     const { uuid } = myFormData;
@@ -229,6 +233,10 @@ class Form extends React.Component<IProps> {
 
   render() {
     const { schema, mySchema, uiSchema, myFormData, action, resource, resources, resourceData } = this.state as IState;
+
+    if (settings.get('dataFolder') === undefined) return (
+      <div>You must set a data folder first before using the app!</div>
+    );
 
     return (
       <div>
