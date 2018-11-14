@@ -4,6 +4,11 @@
       "disabled": true
     }
   },
+  "version": {
+    "ui:options": {
+      "disabled": true
+    }
+  },
   "name": {
     "ui:autofocus": true
   },
