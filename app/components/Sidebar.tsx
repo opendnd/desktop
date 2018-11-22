@@ -71,10 +71,6 @@ export const dashboardRoutes:({
     sidebarName: 'Campaigns',
     icon: <SettingsInputComponentIcon />,
   },{
-    path: '/classes',
-    sidebarName: 'Classes',
-    icon: <SettingsEthernetIcon />,
-  },{
     path: '/cultures',
     sidebarName: 'Cultures',
     icon: <LanguageIcon />,
@@ -122,6 +118,10 @@ export const dashboardRoutes:({
     path: '/items',
     sidebarName: 'Items',
     icon: <MoveToInboxIcon />,
+  },{
+    path: '/klasses',
+    sidebarName: 'Klasses',
+    icon: <SettingsEthernetIcon />,
   },{
     path: '/languages',
     sidebarName: 'Languages',
